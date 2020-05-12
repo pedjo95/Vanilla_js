@@ -9,17 +9,29 @@ const http = new easyHTTP;
   // }
 // });
 
-// Post Posts
+// // Post Posts
+// const data = {
+//   title: "Custom Post",
+//   body: "This is a custom post"
+// };
+// // Create post
+// http.post('https://jsonplaceholder.typicode.com/posts', data, function(error, post) {
+  // if(error) {
+  //   console.log(error);
+  // } else {
+  //   console.log(post);
+  // }
+// });
+
+// Update Post
 const data = {
   title: "Custom Post",
   body: "This is a custom post"
 };
-// Create post
-http.post('https://jsonplaceholder.typicode.com/posts', data, function(error, post) {
+http.put('https://jsonplaceholder.typicode.com/posts/5', data, function(error, post) {
   if(error) {
     console.log(error);
   } else {
     console.log(post);
   }
-});
-
+})
